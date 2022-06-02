@@ -27,10 +27,4 @@ public class MainScriptGame : MonoBehaviour
 
     }
 
-    public GameObject RandomSelection()
-    {
-        iChar = Random.Range(0, gameCharacters.Length);
-        return Instantiate(gameCharacters[iChar]);
-
-    }
 }

@@ -12,6 +12,7 @@ public class WantedTimer : MonoBehaviour
     public GameObject screen;
     public Text huntTime;
     public GameObject characterShow;
+    public GameObject characterPos;
 
     public GameObject popUp;
     public GameObject spawnPosition;
@@ -31,14 +32,15 @@ public class WantedTimer : MonoBehaviour
         timer += Time.deltaTime;
 
         if (timer >= timeOpen)
-            {
-                popUp.SetActive(false);
+        {
+            characterPos.SetActive(true);
+            popUp.SetActive(false);
 
-            }
+        }
 
 
 
 
-        timeOpenText.text = timeOpen.ToString();
+        //timeOpenText.text = timeOpen.ToString();
     }
 }
