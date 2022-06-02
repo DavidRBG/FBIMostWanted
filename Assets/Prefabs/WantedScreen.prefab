@@ -503,7 +503,7 @@ MonoBehaviour:
   timeOpenText: {fileID: 0}
   timer: 0
   screen: {fileID: 938916642498772926}
-  timing: 0
+  timing: 5
   huntTime: {fileID: 690753734442101625}
   characterShow: {fileID: 8079131319831439296}
   popUp: {fileID: 938916642498772926}

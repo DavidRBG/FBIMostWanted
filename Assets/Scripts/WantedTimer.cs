@@ -10,7 +10,6 @@ public class WantedTimer : MonoBehaviour
     public Text timeOpenText;
     public float timer;
     public GameObject screen;
-    public float timing;
     public Text huntTime;
     public GameObject characterShow;
 
@@ -31,25 +30,15 @@ public class WantedTimer : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timeOpen <= timer)
-        {
-            EnablePopUp();
-
-            if (timing >= timeOpen)
+        if (timer >= timeOpen)
             {
                 popUp.SetActive(false);
 
             }
-        }
 
 
-        huntTime.text = timing.ToString();
+
 
         timeOpenText.text = timeOpen.ToString();
-    }
-
-    public void EnablePopUp()
-    {
-        timing += Time.deltaTime;
     }
 }
