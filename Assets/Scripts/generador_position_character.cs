@@ -4,10 +4,37 @@ using UnityEngine;
 
 public class generador_position_character : MonoBehaviour
 {
-    private int posicionesrellenar;
+    public int posicionesrellenar;
     public int nivel = 1;
     public GameObject[] posiciones;
     public GameObject prefabpersonajes;
+
+    public GameObject powerUp;
+    public float timer;
+    public float randomAppearPowerUp;
+
+    private void Start()
+    {
+        randomAppearPowerUp = Random.Range(20f, 150f);
+    }
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= randomAppearPowerUp)
+        {
+            powerUp.SetActive(true);
+
+            Debug.Log(timer + " = " + randomAppearPowerUp + " aparece Power Up ");
+        }
+
+        if (timer >= randomAppearPowerUp + 5)
+        {
+            powerUp.SetActive(false);
+
+            Debug.Log(timer + " = " + randomAppearPowerUp + " desaparece Power Up ");
+        }
+    }
     public void OnEnable()
     {
         posicionesrellenar = nivel * 5;
@@ -50,9 +77,6 @@ public class generador_position_character : MonoBehaviour
                 personaje.transform.position = posiciones[posicionaleatoria].transform.position;
             }
         }
-
-
-
-        //escoger posicion aleatoria, comprobar si esta vacia y si lo esta mete un personaje. Si no esta vacia, pasa a la siguiente.
     }
+
 }

@@ -8,7 +8,7 @@ public class Character_selector : MonoBehaviour
     private GameObject personajeactivo;
 
     void OnEnable()
-    { // seleccion de un personaje random /= wally, nos servirá para los escondites.
+    { 
         indicepersonajeactivo = Random.Range(0, 29);
         if (indicepersonajeactivo == seleccion_personaje.instance.indicewally)
         {
