@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 2442700073860811198}
   - component: {fileID: 3532807652614765066}
   - component: {fileID: 4116916738364113365}
-  - component: {fileID: -6653482307983203545}
+  - component: {fileID: 5213538095988314222}
   m_Layer: 5
   m_Name: FailPopUp
   m_TagString: Untagged
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &-6653482307983203545
+--- !u!114 &5213538095988314222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8611826238930916432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a51356fc35b3b47ab53f292868bcbe, type: 3}
+  m_Script: {fileID: 11500000, guid: e91a89b0ac04fbb4386b6d6008926ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  closeTimer: 2
+  closeTimer: 3

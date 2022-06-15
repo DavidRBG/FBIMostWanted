@@ -11,13 +11,28 @@ public class GameController : MonoBehaviour
     public GameObject[] personajes;
     public int iChar;
 
-    public bool isPlaying =false;
+    public bool isPlaying = false;
     public int nivel = 1;
+    public GameObject failScreen;
+    public GameObject gotchaScreen;
+
+    //public AudioSource sounds;
+    //public AudioClip wrong;
+    //public AudioClip right;
 
 
+
+
+    private void Start()
+    {
+
+    }
     void Awake()
     {
-        if (GameController.instance == null) 
+
+
+
+        if (GameController.instance == null)
         {
             GameController.instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -32,6 +47,8 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+
+
         if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
@@ -45,6 +62,7 @@ public class GameController : MonoBehaviour
             nivel = 1;
             SceneManager.LoadScene(0);
         }
+
     }
 
     public GameObject RandomPersonaje()
@@ -80,10 +98,37 @@ public class GameController : MonoBehaviour
             GameObject escondites = HidePoints.instance.RandomHidePoints();
             personas.transform.parent = escondites.transform;
             personas.transform.localPosition = Vector3.zero;
-            personas.transform.localScale= Vector3.one;
+            personas.transform.localScale = Vector3.one;
             personas.transform.LookAt(Camera.main.transform);
         }
     }
+    void Gotcha()
+    {
+        //Debug.Log("Encontrado"); 
+        //sounds = gameObject.GetComponent<AudioSource>();
+        //sounds.PlayOneShot(right);
+
+        GameObject popUp = Instantiate(gotchaScreen);
+        popUp.SetActive(true);
+        personajes[iChar].tag = "Persona";
+        nivel++;
+        //Debug.Log(nivel);
+        gotchaScreen.SetActive(true);
+        isPlaying = false;
+
+       
+    }
+
+    void Fail()
+    {
+        //Debug.Log("Perdiste");
+        //sounds = gameObject.GetComponent<AudioSource>();
+        //sounds.PlayOneShot(wrong);
+        GameObject popUp = Instantiate(failScreen);
+        popUp.SetActive(true);
+        isPlaying = false;
+    }
+
 
     public void RaycastPoint()
     {
@@ -104,18 +149,16 @@ public class GameController : MonoBehaviour
                 {
                     if (hitInfo.transform.tag == "Player")
                     {
-                        Debug.Log("Encontrado");
-                        personajes[iChar].tag = "Persona";
-                        nivel++;
-                        SceneManager.LoadScene(Random.Range(1, 3));
-                        Debug.Log(nivel);
+                        Gotcha();
+                    }
+
+                    if (hitInfo.transform.tag == "Persona")
+                    {
+                        Fail();
                     }
                 }
 
-                if (hitInfo.transform.tag == "Persona")
-                {
-                    Debug.Log("Perdiste");
-                }
+               
             }
 
         }
