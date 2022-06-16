@@ -18,6 +18,7 @@ public class FailPopUp : MonoBehaviour
             if (closeTimer <= timer)
             {
                 gameObject.SetActive(false);
+                GameController.instance.isPlaying = true;
 
             }
 

@@ -10,7 +10,6 @@ public class TimerPopUp : MonoBehaviour
     public GameObject wantedScreen;
     public GameObject timerScreen;
     public TextMeshProUGUI labelSearchTimer;
-    //public int searchSeg;
     private bool isWantedScreen;
     public float searchTimer;
 

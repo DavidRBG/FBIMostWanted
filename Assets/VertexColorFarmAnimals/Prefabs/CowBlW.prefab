@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3542067833125654014}
   m_Layer: 0
   m_Name: CowBlW
-  m_TagString: Player
+  m_TagString: Persona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

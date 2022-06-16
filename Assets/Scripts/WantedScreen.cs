@@ -12,6 +12,7 @@ public class WantedScreen : MonoBehaviour
     public float timer = 5f;
     public GameObject pantallaBuscar;
     public GameObject spawnPoint;
+    public GameObject personaje;
 
     void Awake()
     {
@@ -54,7 +55,7 @@ public class WantedScreen : MonoBehaviour
 
     public void SetWantedCharacter()
     {
-        GameObject personaje = GameController.instance.RandomPersonaje();
+        personaje = GameController.instance.RandomPersonaje();
         personaje.transform.parent = spawnPoint.transform;
         personaje.transform.position = spawnPoint.transform.position;
         personaje.transform.localScale = Vector3.one * 300;
