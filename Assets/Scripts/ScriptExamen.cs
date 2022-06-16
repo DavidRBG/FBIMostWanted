@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ScriptExamen : MonoBehaviour
 {
+    public static ScriptExamen instance;
+
     public GameObject keepPersonaje;
     public GameObject [] newPersonas;
 
@@ -13,24 +15,28 @@ public class ScriptExamen : MonoBehaviour
 
     public void pauseButton()
     {
-        //WantedScreen.instance.pantallaBuscar.SetActive(true);
+        WantedScreen.instance.Mostrar2();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        keepPersonaje = WantedScreen.instance.personaje;
 
     }
 
     public void powerUpButton()
     {
-        //newPersonas = GameController.instance.personajes;
+        newPersonas = GameController.instance.personajes;
 
+        for (int i = 0; i < (newPersonas.Length); i++)
+        {
+            //newPersonas.Length =newPersonas.Length / 2f;
+            //newPersonas.SetActive
 
-        //for (int i = 0; i < newPersonas.Length; i++)
-        //{
-        //    newPersonas.Length = newPersonas.Length / 2f;
+        }
 
-        //}
+    }
 
+    public void KeepPersonaje()
+    {
+        keepPersonaje = WantedScreen.instance.personaje;
 
     }
 }

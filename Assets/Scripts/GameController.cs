@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     //public AudioClip right;
 
 
+    public GameObject keepPersonaje;
 
 
     private void Start()
@@ -29,9 +30,6 @@ public class GameController : MonoBehaviour
     }
     void Awake()
     {
-
-
-
         if (GameController.instance == null)
         {
             GameController.instance = this;
@@ -42,29 +40,23 @@ public class GameController : MonoBehaviour
         {
             Destroy(this);
         }
-
     }
 
     void Update()
     {
-
-
         if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
         }
 
         RaycastPoint();
-
         if (nivel > 5)
 
         {
             nivel = 1;
             SceneManager.LoadScene(0);
         }
-
     }
-
     public GameObject RandomPersonaje()
     {
         iChar = Random.Range(0, personajes.Length);
@@ -115,8 +107,6 @@ public class GameController : MonoBehaviour
         //Debug.Log(nivel);
         gotchaScreen.SetActive(true);
         isPlaying = false;
-
-       
     }
 
     void Fail()
@@ -157,14 +147,8 @@ public class GameController : MonoBehaviour
                         Fail();
                     }
                 }
-
-               
             }
-
         }
-
-
     }
-
 
 }

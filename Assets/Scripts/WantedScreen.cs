@@ -11,8 +11,11 @@ public class WantedScreen : MonoBehaviour
     public TextMeshProUGUI contador;
     public float timer = 5f;
     public GameObject pantallaBuscar;
+    public GameObject pantallaBuscar2;
+
     public GameObject spawnPoint;
     public GameObject personaje;
+
 
     void Awake()
     {
@@ -51,6 +54,7 @@ public class WantedScreen : MonoBehaviour
         pantallaBuscar.SetActive(false);
         GameController.instance.isPlaying = true;
         GameController.instance.RellenarNivel();
+        timer = 0;
     }
 
     public void SetWantedCharacter()
@@ -62,4 +66,9 @@ public class WantedScreen : MonoBehaviour
         personaje.transform.rotation = spawnPoint.transform.rotation;
     }
 
+    public void Mostrar2()
+    {
+        pantallaBuscar2.SetActive(true);
+        ScriptExamen.instance.KeepPersonaje();
+    }
 }

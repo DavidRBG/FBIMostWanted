@@ -3224,6 +3224,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4757596647981188, guid: d5e55a310e3d6d7448828e8cf069ff04, type: 3}
   m_PrefabInstance: {fileID: 746876075}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &753833121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753833123}
+  - component: {fileID: 753833122}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &753833122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753833121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fccc4bd97ec2204f8d55be037bf1b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personajes: []
+  iChar: 0
+  isPlaying: 0
+  nivel: 1
+  failScreen: {fileID: 8611826238930916432, guid: 8ab6a6f40f0663e47b90b664e8dc2d88, type: 3}
+  gotchaScreen: {fileID: 762748679727841250, guid: 6285328a3d1ae5040b714abb23b8db4e, type: 3}
+  keepPersonaje: {fileID: 0}
+--- !u!4 &753833123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753833121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.789999, y: 5.5021095, z: -88.30126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &830603816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4135,8 +4185,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Examen
       objectReference: {fileID: 0}
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 951019952}
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScriptExamen, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+--- !u!114 &951019952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2627712217477934615, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+  m_PrefabInstance: {fileID: 951019951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bfe4246649d5e4e88d1ac4dfaa2159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &958797044
 PrefabInstance:
   m_ObjectHideFlags: 0

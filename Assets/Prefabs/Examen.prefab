@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: 260}
+  m_AnchoredPosition: {x: 34, y: 148}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8795001821891503739
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1649878223043656291}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScriptExamen, Assembly-CSharp
         m_MethodName: powerUpButton
         m_Mode: 1
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 8795001822754421049}
   - component: {fileID: 8795001822754421048}
   - component: {fileID: 8795001822754421051}
-  - component: {fileID: 1649878223043656291}
+  - component: {fileID: 2627712217477934615}
   m_Layer: 5
   m_Name: Examen
   m_TagString: Untagged
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1649878223043656291
+--- !u!114 &2627712217477934615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,6 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29bfe4246649d5e4e88d1ac4dfaa2159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keepPersonaje: {fileID: 0}
+  newPersonas: []
 --- !u!1 &8795001823342687610
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.7, y: 260}
+  m_AnchoredPosition: {x: -28.7, y: 148}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8795001823375030997
@@ -530,7 +532,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1649878223043656291}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScriptExamen, Assembly-CSharp
         m_MethodName: pauseButton
         m_Mode: 1

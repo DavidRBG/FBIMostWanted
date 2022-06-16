@@ -12151,6 +12151,7 @@ MonoBehaviour:
   nivel: 1
   failScreen: {fileID: 966405877}
   gotchaScreen: {fileID: 65386114}
+  keepPersonaje: {fileID: 0}
 --- !u!4 &2018165373
 Transform:
   m_ObjectHideFlags: 0
@@ -12935,5 +12936,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Examen
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8795001821760049527}
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795001823375030999, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScriptExamen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1649878223043656291, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+--- !u!114 &8795001821760049527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2627712217477934615, guid: 6e815ab0aaf4b26478c5b0ad3c1365ce, type: 3}
+  m_PrefabInstance: {fileID: 8795001821760049526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bfe4246649d5e4e88d1ac4dfaa2159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
