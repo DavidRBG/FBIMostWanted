@@ -15,6 +15,8 @@ public class WantedScreen : MonoBehaviour
 
     public GameObject spawnPoint;
     public GameObject personaje;
+    private bool  primeraVez = true;   
+
 
 
     void Awake()
@@ -29,6 +31,7 @@ public class WantedScreen : MonoBehaviour
         {
             Destroy(this);
         }
+        timer = 5f;
     }
 
     void Update()
@@ -51,10 +54,21 @@ public class WantedScreen : MonoBehaviour
 
     public void Cerrar()
     {
-        pantallaBuscar.SetActive(false);
+        if (primeraVez)
+        {
+            GameController.instance.RellenarNivel();
+            primeraVez = false;
+        }
+        else
+        {
+            GameController.instance.RerellenarNivel();
+        }
+
         GameController.instance.isPlaying = true;
-        GameController.instance.RellenarNivel();
-        timer = 0;
+        timer = 5;
+        pantallaBuscar.SetActive(false);
+        
+
     }
 
     public void SetWantedCharacter()
@@ -68,7 +82,8 @@ public class WantedScreen : MonoBehaviour
 
     public void Mostrar2()
     {
-        pantallaBuscar2.SetActive(true);
-        ScriptExamen.instance.KeepPersonaje();
+        pantallaBuscar.SetActive(true);
+        GameController.instance.isPlaying = false;
+
     }
 }

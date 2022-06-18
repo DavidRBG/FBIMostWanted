@@ -1572,7 +1572,7 @@ GameObject:
   - component: {fileID: 1131593597167044147}
   m_Layer: 0
   m_Name: Character_Son_01
-  m_TagString: Player
+  m_TagString: Persona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

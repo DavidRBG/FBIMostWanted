@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: -3052726112458307012}
   m_Layer: 0
   m_Name: SM_Chr_Farmer_Male_01
-  m_TagString: Player
+  m_TagString: Persona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

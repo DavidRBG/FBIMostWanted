@@ -2689,7 +2689,7 @@ GameObject:
   - component: {fileID: -4414776562704569059}
   m_Layer: 0
   m_Name: Character_SummerGirl_01
-  m_TagString: Player
+  m_TagString: Persona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

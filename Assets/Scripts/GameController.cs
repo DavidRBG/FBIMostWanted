@@ -72,6 +72,8 @@ public class GameController : MonoBehaviour
         {
             num = Random.Range(0, personajes.Length);
         }
+        personajes[num].tag = "Persona";
+
         return Instantiate(personajes[num]);
     }
 
@@ -94,6 +96,12 @@ public class GameController : MonoBehaviour
             personas.transform.LookAt(Camera.main.transform);
         }
     }
+
+    public void RerellenarNivel()
+    {
+        HidePoints.instance.LimpiarHidePoints(iChar);
+        RellenarNivel();
+    }
     void Gotcha()
     {
         //Debug.Log("Encontrado"); 
@@ -104,7 +112,6 @@ public class GameController : MonoBehaviour
         popUp.SetActive(true);
         personajes[iChar].tag = "Persona";
         nivel++;
-        //Debug.Log(nivel);
         gotchaScreen.SetActive(true);
         isPlaying = false;
     }

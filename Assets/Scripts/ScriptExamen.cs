@@ -17,7 +17,7 @@ public class ScriptExamen : MonoBehaviour
     {
         WantedScreen.instance.Mostrar2();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 

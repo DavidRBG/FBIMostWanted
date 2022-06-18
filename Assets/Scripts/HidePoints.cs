@@ -26,7 +26,7 @@ public class HidePoints : MonoBehaviour
     void Rellenar()
     {
         
-        hidePoints = new GameObject[transform.childCount];
+        //hidePoints = new GameObject[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
             hidePoints[i] = transform.GetChild(i).gameObject;
@@ -45,6 +45,24 @@ public class HidePoints : MonoBehaviour
 
 
 
+
+    }
+
+    public void LimpiarHidePoints(int x)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).childCount !=0)
+            {
+
+                GameObject destruir = transform.GetChild(i).GetChild(0).gameObject;
+                Destroy(destruir);
+                Debug.Log("Sirve");
+
+            }
+
+
+        }
 
     }
 }
